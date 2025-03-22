@@ -15,7 +15,7 @@ def get_unique_filename(base_name, extension, directory):
 
 def on_button_click_create_file():
     directory = filedialog.askdirectory(title="Select Directory")
-    if not directory:  # If the user cancels, do nothing
+    if not directory:  
         return
     filename = get_unique_filename("file", ".txt", directory)
     with open(filename, "w") as file:
@@ -24,7 +24,7 @@ def on_button_click_create_file():
 
 def on_button_click_create_pythonfile():
     directory = filedialog.askdirectory(title="Select Directory")
-    if not directory:  # If the user cancels, do nothing
+    if not directory:  
         return
     filename = get_unique_filename("pythonfile", ".py", directory)
     with open(filename, "w") as file:
@@ -33,7 +33,7 @@ def on_button_click_create_pythonfile():
 
 def on_button_click_create_scalafile():
     directory = filedialog.askdirectory(title="Select Directory")
-    if not directory:  # If the user cancels, do nothing
+    if not directory:  
         return
     filename = get_unique_filename("scalafile", ".scala", directory)
     with open(filename, "w") as file:
@@ -42,7 +42,7 @@ def on_button_click_create_scalafile():
 
 def on_button_click_create_csharpfile():
     directory = filedialog.askdirectory(title="Select Directory")
-    if not directory:  # If the user cancels, do nothing
+    if not directory:  
         return
     filename = get_unique_filename("csharpfile", ".cs", directory)
     with open(filename, "w") as file:
@@ -60,9 +60,9 @@ btn0 = tk.Button(
     text="Create File",
     command=on_button_click_create_file,
     font=("JetBrainsMono Nerd Font", 12),
-    bg="#444444",  # Dark gray background
-    fg="white",    # White text
-    activebackground="#666666",  # Lighter gray when clicked
+    bg="#444444",  
+    fg="white",    
+    activebackground="#666666",  
     activeforeground="white",
     relief="flat",
     padx=20,
