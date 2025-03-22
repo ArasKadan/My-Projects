@@ -13,14 +13,14 @@ def get_unique_filename(base_name, extension, directory):
 
     return filename
 
-def on_button_click_create_file():
+def on_button_click_create_htmlfile():
     directory = filedialog.askdirectory(title="Select Directory")
     if not directory:  
         return
-    filename = get_unique_filename("file", ".txt", directory)
+    filename = get_unique_filename("htmlfile", ".html", directory)
     with open(filename, "w") as file:
-        file.write("This file was created by a button click!")
-    print(f"Text file created: {filename}")
+        file.write("<!DOCTYPE html>\n<html>\n<head>\n<title>HTML File</title>\n</head>\n<body>\n<h1>This file was created by a button click!</h1>\n</body>\n</html>")
+    print(f"Html file created: {filename}")
 
 def on_button_click_create_pythonfile():
     directory = filedialog.askdirectory(title="Select Directory")
@@ -57,8 +57,8 @@ canvas.pack()
 
 btn0 = tk.Button(
     root,
-    text="Create File",
-    command=on_button_click_create_file,
+    text="Create Html File",
+    command=on_button_click_create_htmlfile,
     font=("JetBrainsMono Nerd Font", 12),
     bg="#444444",  
     fg="white",    
