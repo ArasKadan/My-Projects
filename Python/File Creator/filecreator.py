@@ -49,6 +49,15 @@ def on_button_click_create_csharpfile():
         file.write("using System;")
     print(f"C# file created: {filename}")
 
+def on_button_click_create_javascriptfile():
+    directory = filedialog.askdirectory(title="Select Directory")
+    if not directory:  
+        return
+    filename = get_unique_filename("javascriptfile", ".js", directory)
+    with open(filename, "w") as file:
+        file.write("console.log('This file was created by a button click!')")
+    print(f"Javascript file created: {filename}")
+
 root = tk.Tk()
 root.title("File Creator")
 root.configure(bg="black")
@@ -109,10 +118,24 @@ btn3 = tk.Button(
     padx=20,
     pady=10
 )
+btn4 = tk.Button(
+    root,
+    text="Create Javascript File",
+    command=on_button_click_create_javascriptfile,
+    font=("JetBrainsMono Nerd Font", 12),
+    bg="#444444",
+    fg="white",
+    activebackground="#666666",
+    activeforeground="white",
+    relief="flat",
+    padx=20,
+    pady=10
+)
 
 btn0.pack(pady=10)
 btn1.pack(pady=10)
 btn2.pack(pady=10)
 btn3.pack(pady=10)
+btn4.pack(pady=10)
 
 root.mainloop()
