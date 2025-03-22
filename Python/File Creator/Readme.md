@@ -1,4 +1,5 @@
 # File Creator 
+To use, You have to run it in the terminal, i recommend saving the file in the home folder, as you save time by not having to cd where it is, i already added the shebang in the file, so you can just simply run "chmod u+x filecreator.py" and then use ./filecreator.py
 This is something i made just to save time typing, i hope you enjoy using it!
 # Which types of files?
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
